@@ -51,9 +51,8 @@ function App() {
     }
     //foul logic
     else if (type === 'foul') {
-      if (strikeCounter > 2) {
+      if (strikeCounter < 2) {
         setStrikeCounter(strikeCounter + 1);
-        console.log("running")
       }
     }
     //hit logic
