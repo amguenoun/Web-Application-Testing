@@ -15,6 +15,15 @@ function App() {
   const [scoreZero, setScoreZero] = useCounter('scoreZero');
   const [scoreOne, setScoreOne] = useCounter('scoreOne');
 
+  const resetAll = () => {
+    setBallCounter(0);
+    setStrikeCounter(0);
+    setOutCounter(0);
+    setTeam(0);
+    setScoreZero(0);
+    setScoreOne(0);
+  }
+
   const resetPoints = () => {
     setBallCounter(0);
     setStrikeCounter(0);
@@ -82,7 +91,7 @@ function App() {
         scoreZero={scoreZero}
         scoreOne={scoreOne}
       />
-      <Dashboard incrementPoints={incrementPoints} />
+      <Dashboard incrementPoints={incrementPoints} resetAll={resetAll} />
     </div >
   );
 }

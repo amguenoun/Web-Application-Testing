@@ -39,10 +39,13 @@
   justify-content: space-around;
 }
 
-.button-bar button{
+button{
   background:#DBD6C6;
   padding:1% 4%;
   border-radius: 4px;
   text-transform: uppercase;
   font-weight:bold;
+}
+.reset-btn {
+  margin:2% 0%;
 }
