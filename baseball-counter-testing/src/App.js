@@ -3,6 +3,7 @@ import React from 'react';
 import useCounter from './components/hooks/useCounter';
 import Display from './components/Display';
 import Dashboard from './components/Dashboard';
+import { incrementByOne } from './components/functions/functionsList';
 
 import './App.css';
 
@@ -22,7 +23,7 @@ function App() {
         resetPoints();
       }
       else {
-        setBallCounter(ballCounter + 1);
+        setBallCounter(incrementByOne(ballCounter));
       }
     }
     //strike logic
@@ -31,13 +32,13 @@ function App() {
         resetPoints();
       }
       else {
-        setStrikeCounter(strikeCounter + 1);
+        setStrikeCounter(incrementByOne(strikeCounter));
       }
     }
     //foul logic
     else if (type === 'foul') {
       if (strikeCounter < 2) {
-        setStrikeCounter(strikeCounter + 1);
+        setStrikeCounter(incrementByOne(strikeCounter));
       }
     }
     //hit logic
