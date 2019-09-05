@@ -11,6 +11,7 @@ function App() {
   const [ballCounter, setBallCounter] = useCounter('ball');
   const [strikeCounter, setStrikeCounter] = useCounter('strike');
   const [outCounter, setOutCounter] = useCounter('outs');
+  const [hitCounter, setHitCounter] = useCounter('hits');
   const [team, setTeam] = useCounter('team');
   const [scoreZero, setScoreZero] = useCounter('scoreZero');
   const [scoreOne, setScoreOne] = useCounter('scoreOne');
@@ -22,6 +23,7 @@ function App() {
     setTeam(0);
     setScoreZero(0);
     setScoreOne(0);
+    setHitCounter(0)
   }
 
   const resetPoints = () => {
@@ -39,6 +41,7 @@ function App() {
   const score = () => {
     setBallCounter(0);
     setStrikeCounter(0);
+    setHitCounter(0);
     if (team == 0) {
       setScoreZero(incrementByOne(scoreZero));
     }
@@ -74,7 +77,12 @@ function App() {
     }
     //hit logic
     else if (type === 'hit') {
-      score();
+      if (hitCounter === 3) {
+        score();
+      }
+      else {
+        setHitCounter(incrementByOne(hitCounter));
+      }
     }
     else {
       alert('Error: Input Unrecognized: App.js: incrementPoints Function');
@@ -90,6 +98,7 @@ function App() {
         team={team}
         scoreZero={scoreZero}
         scoreOne={scoreOne}
+        hitCounter={hitCounter}
       />
       <Dashboard incrementPoints={incrementPoints} resetAll={resetAll} />
     </div >
