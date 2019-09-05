@@ -1,17 +1,5 @@
 import React from 'react'
-
-const translateBase = (hits) => {
-    console.log(hits)
-    if (hits === 1) {
-        return `${hits}st Base`;
-    }
-    else if (hits === 0) {
-        return hits;
-    }
-    else {
-        return `${hits}nd Base`;
-    }
-}
+import { translateBase } from './functions/functionsList'
 
 const Display = (props) => {
 
