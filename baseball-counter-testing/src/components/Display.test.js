@@ -19,4 +19,5 @@ test('Contains scoreboard ', () => {
     getByText(/ball:/i);
     getByText(/Strike:/i);
     getByText(/outs:/i);
+    getByText(/field:/i);
 })
