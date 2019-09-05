@@ -1,6 +1,7 @@
 import React from 'react'
 
 const translateBase = (hits) => {
+    console.log(hits)
     if (hits === 1) {
         return `${hits}st Base`;
     }

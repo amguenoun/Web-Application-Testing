@@ -42,7 +42,7 @@ function App() {
     setBallCounter(0);
     setStrikeCounter(0);
     setHitCounter(0);
-    if (team == 0) {
+    if (team === 0) {
       setScoreZero(incrementByOne(scoreZero));
     }
     else {
