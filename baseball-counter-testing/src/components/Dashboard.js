@@ -3,7 +3,7 @@ import React from 'react'
 const Dashboard = (props) => {
 
     return (
-        <div className="buttonBar">
+        <div className="button-bar">
             <button onClick={() => props.incrementPoints('strike')}>Strike</button>
             <button onClick={() => props.incrementPoints('ball')}>Ball</button>
             <button onClick={() => props.incrementPoints('foul')}>Foul</button>
