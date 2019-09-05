@@ -13,6 +13,10 @@ test('Contains header ', () => {
 
 test('Contains scoreboard ', () => {
     const { getByText } = render(<Display />)
+    getByText(/Team:/i);
+    getByText(/Team 1/i);
+    getByText(/Team 2/i);
     getByText(/ball:/i);
     getByText(/Strike:/i);
+    getByText(/outs:/i);
 })
