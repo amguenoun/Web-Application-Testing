@@ -15,7 +15,6 @@ const Display = (props) => {
                 <h3>Strike: {props.strikeCounter}</h3>
                 <h3>Outs: {props.outCounter}</h3>
             </div>
-            <h3></h3>
         </div>
     )
 }

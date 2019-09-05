@@ -12,4 +12,5 @@ test('Contains strike, ball, foul, and hit buttons', () => {
     getByText(/ball/i);
     getByText(/foul/i);
     getByText(/hit/i);
+    getByText(/reset dashboard/i);
 })
