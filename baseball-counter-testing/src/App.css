@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  
+}
+
+.display-box{
+  border:1px solid black;
+  width:40%;
+  margin:2% auto;
+  border-radius: 16px;
+  background: #DBD6C6;
+  padding:1% 0%;
+}
+
+.team-scores{
+  display: flex;
+  flex-direction:row;
+  margin:0 auto;
+  justify-content:center;
+}
+
+.team-scores h3 {
+  margin:0% 2%;
+}
+
+.counters{
+  display:flex;
+  margin: 0 auto;
+  justify-content:center;
+}
+
+.counters h3{
+  margin:2% 2%;
+}
+
+.button-bar{
+  width:40%;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-around;
+}
+
+button{
+  background:#DBD6C6;
+  padding:1% 4%;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+.reset-btn {
+  margin:2% 0%;
+}
