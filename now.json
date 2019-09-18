@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "name": "baseball-counter-testing",
+    "builds": [
+        {
+            "src": "baseball-counter-testing/package.json",
+            "use": "@now/static-build",
+            "config": {
+                "distDir": "build"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "baseball-counter-testing/$1"
+        }
+    ]
+}
